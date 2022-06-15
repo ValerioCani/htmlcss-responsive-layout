@@ -1,5 +1,45 @@
+/* regole generali */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;  
 }
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container{
+    margin: 0 2rem;
+}
+/* regole di debug */
+
+.placeholder{
+    height: 50px;
+    width: 100px;
+    background-color: #b5ddff;
+}
+
+/* regole header */
+
+header{
+    height: 75px;
+    background-color: #0084fd;
+}
+
+header .container{
+    align-items: center;
+    height: 100%;
+}
+
+/* regole media queries */
+
+@media screen and (min-width:1064px) {
+    .container{
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+#9792e4
