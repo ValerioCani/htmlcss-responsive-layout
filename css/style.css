@@ -8,25 +8,36 @@
 .flex{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
 .container{
-    margin: 0 2rem;
+    margin: 0 1.25rem;
 }
 /* regole di debug */
 
 .placeholder{
-    height: 50px;
-    width: 100px;
     background-color: #b5ddff;
 }
 
+header .placeholder{
+    height: 50px;
+    width: 100px;
+}
+main .placeholder{
+    width: 100%;
+    height: calc( 100vw - 4rem );
+}
+.card{
+    width: 100%;
+}
 /* regole header */
 
 header{
     height: 75px;
     background-color: #0084fd;
+    margin-bottom: 3rem;
 }
 
 header .container{
@@ -34,7 +45,36 @@ header .container{
     height: 100%;
 }
 
+/* regole main */
+
+main section:nth-child(2n){
+    background-color:#9792e4;
+}
+
+/* regole sezione demo */
+
+.card{
+    margin-bottom: 2rem;
+    padding: 0 0.75rem;
+}
+
 /* regole media queries */
+
+@media screen and (min-width:481px){
+    .card{
+        width: calc(100% / 3);
+        height: calc( 100vw - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+    }
+
+    #card-l .placeholder{
+        height: 50%;
+    }
+
+    #card-l{
+        width: calc(100% / 3 * 2);
+        height: calc( 100vw - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+    }
+}
 
 @media screen and (min-width:1064px) {
     .container{
@@ -42,4 +82,4 @@ header .container{
         margin: auto;
     }
 }
-#9792e4
+
