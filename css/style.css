@@ -14,33 +14,42 @@
 
 .container{
     margin: 0 1.25rem;
+    padding: 3rem 0 1rem 0;
 }
 /* regole di debug */
 
 .placeholder{
-    background-color: #b5ddff;
+    width: 100%;
+    height: calc( 100vw - 4rem );
 }
 
 header .placeholder{
     height: 50px;
     width: 100px;
+    background-color: #b5ddff;
 }
-main .placeholder{
-    width: 100%;
-    height: calc( 100vw - 4rem );
+
+#demo .placeholder, #partners .placeholder{
+    background-color: #b5ddff;
 }
-.card{
-    width: 100%;
+
+#planning .placeholder{
+    background-color: white;
 }
+
+#partners .placeholder
+
 /* regole header */
 
 header{
     height: 75px;
     background-color: #0084fd;
-    margin-bottom: 3rem;
+}
+.container-head{
+    margin: 0 2rem;
 }
 
-header .container{
+header .container-head{
     align-items: center;
     height: 100%;
 }
@@ -54,14 +63,19 @@ main section:nth-child(2n){
 /* regole sezione demo */
 
 .card{
+    width: 100%;
     margin-bottom: 2rem;
     padding: 0 0.75rem;
 }
 
+/* regole sezione partners */
+
+
 /* regole media queries */
 
 @media screen and (min-width:481px){
-    .card{
+/* regole sezione demo */
+    #demo .card{
         width: calc(100% / 3);
         height: calc( 100vw - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
     }
@@ -70,7 +84,7 @@ main section:nth-child(2n){
         height: 50%;
     }
 
-    #card-l{
+    #demo #card-l{
         width: calc(100% / 3 * 2);
         height: calc( 100vw - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
     }
@@ -80,6 +94,24 @@ main section:nth-child(2n){
     .container{
         max-width: 1000px;
         margin: auto;
+    }
+/* regole sezione demo */
+    #demo .card, main .placeholder,  #demo #card-l{
+        height: calc( 100vw / 3 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+    }
+
+    #demo #card-l{
+        display: flex;
+        width: calc(100% / 3 * 2);
+    }
+
+    #card-l .placeholder{
+       width: 50%;
+       height: 100%;
+    }
+/* regole sezione planning */
+    #planning .card{
+        width: 50%;
     }
 }
 
