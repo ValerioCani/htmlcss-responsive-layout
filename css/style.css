@@ -16,6 +16,10 @@
     box-sizing: border-box;  
 }
 
+body{
+    font-family: sans-serif;
+    line-height: 2rem;
+}
 .flex{
     display: flex;
     flex-wrap: wrap;
@@ -25,6 +29,13 @@
 .container{
     margin: 0 1.25rem;
     padding: 3rem 0 1rem 0;
+}
+
+.card{
+    width: 100%;
+    margin-bottom: 2rem;
+    margin: 0 0 1rem 0;
+    padding: 2rem 2rem 0 2rem;
 }
 
 .btn{
@@ -40,8 +51,16 @@
     border-radius: 1rem;
 }
 
+.radius-l{
+    border-radius: 2rem;
+}
+
 .text-center{
     text-align: center;
+}
+
+#demo .card .text>*, #planning .card *:not(:last-child){
+    margin-bottom: 3rem;
 }
 /*********************************************************** regole di debug */
 
@@ -86,6 +105,13 @@ header .container-head{
     display: block;
 }
 
+.bars button{
+    background-color: var(--first);
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+}
+
 .list{
     display: none;
 }
@@ -120,11 +146,7 @@ main section:nth-child(2n){
     justify-content: space-around;
 }
 
-.card{
-    width: 100%;
-    margin-bottom: 2rem;
-    margin: 0 0 1rem 0;
-    padding: 2rem 2rem 0 2rem;
+#demo .card{
     background-color: var(--second);
 }
 
@@ -159,9 +181,33 @@ main section:nth-child(2n){
     padding: 0.5rem 3rem;
 }
 
-#demo .card .text>*{
-    margin-bottom: 3rem;
+/*********************************************************regole sezione planning */
+
+#planning img{
+    width: 100%;
 }
+
+#planning .planning1{
+    color: var(--white);
+}
+
+#planning .planning2{
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+#planning .planning2 p{
+    font-style: italic;
+}
+
+#planning button{
+    background-color: var(--third);
+    border-radius: 50%;
+    padding: 1rem 1.2rem;
+    border: none;
+    margin: 2rem 2rem 0 2rem;
+}
+
 /********************************************************* regole sezione benefits */
 
 #benefits .feature{
@@ -198,6 +244,19 @@ footer{
         width: calc(100% / 3 * 2 - 1rem);
     }
 
+    .phone{
+        justify-content: flex-start;
+    }
+
+    /* regole sezione planning */
+
+    #planning .planning1 h2{
+        font-size: 4rem;
+    }
+
+    #planning .radius-l{
+        border-radius: 3rem;
+    }
     /* regole sezione partners */
 
     #partners .card{
@@ -260,6 +319,14 @@ footer{
         width: 100%;
     }
 
+    /* regole sezione planning */
+
+    #planning .planning1 h2{
+        font-size:x-large;
+    }
+
+    #planning .planning2{
+    }
     /* regole sezione planning */
 
     #planning .card{
