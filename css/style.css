@@ -29,15 +29,13 @@ header .placeholder{
     background-color: #b5ddff;
 }
 
-#demo .placeholder, #partners .placeholder{
+#demo .placeholder, #partners .placeholder, #about-us .placeholder{
     background-color: #b5ddff;
 }
 
-#planning .placeholder{
+#planning .placeholder, #benefits .placeholder, #started .placeholder{
     background-color: white;
 }
-
-#partners .placeholder
 
 /* regole header */
 
@@ -45,6 +43,7 @@ header{
     height: 75px;
     background-color: #0084fd;
 }
+
 .container-head{
     margin: 0 2rem;
 }
@@ -68,16 +67,23 @@ main section:nth-child(2n){
     padding: 0 0.75rem;
 }
 
-/* regole sezione partners */
+/* regole sezione benefits */
 
+#benefits .feature{
+    max-width: 375px;
+    margin: 1rem auto;
+}
 
 /* regole media queries */
 
 @media screen and (min-width:481px){
-/* regole sezione demo */
+    /* regole di debug */
+    .placeholder{
+        height: calc( 100vw / 2 - 4rem );
+    }
+    /* regole sezione demo */
     #demo .card{
         width: calc(100% / 3);
-        height: calc( 100vw - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
     }
 
     #card-l .placeholder{
@@ -86,32 +92,77 @@ main section:nth-child(2n){
 
     #demo #card-l{
         width: calc(100% / 3 * 2);
-        height: calc( 100vw - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+        height: calc( 100vw / 2 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+    }
+   
+    /* regole sezione partners */
+
+    #partners .card{
+        display: flex;
+    }
+
+    /* regole sezione benefits */
+
+    #benefits .feature{
+        width: 50%;
+    }
+
+    /* regole sezione about-us */
+
+    #about-us .about-text{
+        width: 60%;
+    }
+    
+    
+    #about-us .about-photo{
+        width: 40%;
     }
 }
 
-@media screen and (min-width:1064px) {
+@media screen and (min-width:1064px){
+    /* regole di debug */
+    .placeholder{
+        height: calc( 100vw / 3 - 4rem );
+    }
+    /* fine regole di debug */
     .container{
         max-width: 1000px;
         margin: auto;
     }
-/* regole sezione demo */
-    #demo .card, main .placeholder,  #demo #card-l{
-        height: calc( 100vw / 3 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
-    }
+    /* regole sezione demo */
 
     #demo #card-l{
         display: flex;
         width: calc(100% / 3 * 2);
+        height: calc( 100vw / 3 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
     }
 
     #card-l .placeholder{
        width: 50%;
        height: 100%;
     }
-/* regole sezione planning */
+
+    /* regole sezione planning */
+
     #planning .card{
         width: 50%;
+    }
+
+    /* regole sezione benefits */
+
+    #benefits .feature{
+        width: calc(100% / 3)
+    }
+
+    /* regole sezione about-us */
+
+    #about-us .about-text{
+        width: 80%;
+    }
+    
+    
+    #about-us .about-photo{
+        width: 20%;
     }
 }
 
