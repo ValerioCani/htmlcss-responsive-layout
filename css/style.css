@@ -18,7 +18,6 @@
 
 .flex{
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -26,6 +25,15 @@
 .container{
     margin: 0 1.25rem;
     padding: 3rem 0 1rem 0;
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+.radius-s{
+    border-radius: 1rem;
 }
 /* regole di debug */
 
@@ -56,7 +64,9 @@ header{
 }
 
 .container-head{
-    margin: 0 2rem;
+    justify-content: space-between;
+    margin: 0 1.25rem;
+    padding: 0 0.5rem;
 }
 
 header .container-head{
@@ -64,6 +74,34 @@ header .container-head{
     height: 100%;
 }
 
+.bars{
+    display: block;
+}
+
+.list{
+    display: none;
+}
+
+header .list ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header .list ul li{
+    padding-left:3rem;
+}
+
+header .list ul .navig{
+    color: var(--white);
+    text-decoration: none;
+}
+
+header .list ul .btn-nav{
+    text-decoration: none;
+    background-color: var(--white);
+    padding: 0.5rem 1rem;
+}
 /* regole main */
 
 main section:nth-child(2n){
@@ -71,13 +109,27 @@ main section:nth-child(2n){
 }
 
 /* regole sezione demo */
+#demo .container{
+    justify-content: space-around;
+}
 
 .card{
     width: 100%;
     margin-bottom: 2rem;
+    margin: 0 0 1rem 0;
     padding: 0 0.75rem;
+    background-color: var(--second);
 }
 
+#card-l img{
+    width: 250px;
+    display: block;
+}
+
+.phone{
+    display: flex;
+    align-items: flex-end;
+}
 /* regole sezione benefits */
 
 #benefits .feature{
@@ -105,15 +157,15 @@ footer{
     }
 
     /* regole sezione demo */
+
     #demo .card{
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 1rem);
     }
 
     #demo #card-l{
-        width: calc(100% / 3 * 2);
-        height: calc( 100vw / 2 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+        width: calc(100% / 3 * 2 - 1rem);
     }
-   
+
     /* regole sezione partners */
 
     #partners .card{
@@ -140,7 +192,7 @@ footer{
 
 @media screen and (min-width:1064px){
     /* regole di debug */
-    
+
     .placeholder{
         height: calc( 100vw / 3 - 4rem );
     }
@@ -150,19 +202,30 @@ footer{
         height: 100%;
      }
  
-    /* fine regole di debug */
+    /* regole generali */
 
-    .container{
+    .container, .container-head{
         max-width: 1000px;
         margin: auto;
     }
+    /* regole header */
 
+    .bars{
+        display: none;
+    }
+    
+    .list{
+        display: block;
+    }
     /* regole sezione demo */
 
     #demo #card-l{
         display: flex;
-        width: calc(100% / 3 * 2);
-        height: calc( 100vw / 3 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
+        width: calc(100% / 3 * 2 - 1rem);
+    }  
+    
+    #card-l img{
+        width: 100%;
     }
 
     /* regole sezione planning */
