@@ -9,7 +9,7 @@
     --bright: #fdc15f;
 }   
 
-/* regole generali */
+/**************************************************** regole generali */
 *{
     margin: 0;
     padding: 0;
@@ -32,10 +32,18 @@
     border-radius: 1rem;
 }
 
+.abbello{
+    text-decoration: none;
+}
+
 .radius-s{
     border-radius: 1rem;
 }
-/* regole di debug */
+
+.text-center{
+    text-align: center;
+}
+/*********************************************************** regole di debug */
 
 .placeholder{
     width: 100%;
@@ -56,7 +64,7 @@ header .placeholder{
     background-color: var(--white);
 }
 
-/* regole header */
+/**************************************************************** regole header */
 
 header{
     height: 75px;
@@ -98,17 +106,16 @@ header .list ul .navig{
 }
 
 header .list ul .btn-nav{
-    text-decoration: none;
     background-color: var(--white);
     padding: 0.5rem 1rem;
 }
-/* regole main */
+/***************************************************** regole main */
 
 main section:nth-child(2n){
     background-color: var(--third);
 }
 
-/* regole sezione demo */
+/*************************************************** regole sezione demo */
 #demo .container{
     justify-content: space-around;
 }
@@ -117,7 +124,7 @@ main section:nth-child(2n){
     width: 100%;
     margin-bottom: 2rem;
     margin: 0 0 1rem 0;
-    padding: 0 0.75rem;
+    padding: 2rem 2rem 0 2rem;
     background-color: var(--second);
 }
 
@@ -128,23 +135,48 @@ main section:nth-child(2n){
 
 .phone{
     display: flex;
+    justify-content: center;
     align-items: flex-end;
+    padding-top: 2rem;
 }
-/* regole sezione benefits */
+
+#demo h2, #demo .fas{
+    color: var(--first);
+}
+
+#demo .fas{
+    font-size: 5rem;
+}
+
+#demo p{
+    color: var(--black);
+    font-weight: bold;
+}
+
+#demo .btn-demo{
+    color: var(--white);
+    background-color: var(--first);
+    padding: 0.5rem 3rem;
+}
+
+#demo .card .text>*{
+    margin-bottom: 3rem;
+}
+/********************************************************* regole sezione benefits */
 
 #benefits .feature{
     max-width: 375px;
     margin: 1rem auto;
 }
 
-/* regole footer */
+/********************************************************* regole footer */
 
 footer{
     background-color: var(--black);
 }
 
 
-/* regole media queries */
+/****************************************************** regole media queries */
 
 @media screen and (min-width:481px){
     /* regole di debug */
@@ -191,7 +223,7 @@ footer{
 }
 
 @media screen and (min-width:1064px){
-    /* regole di debug */
+    /************************************************************** regole di debug */
 
     .placeholder{
         height: calc( 100vw / 3 - 4rem );
