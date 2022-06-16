@@ -1,3 +1,14 @@
+/* variabili */
+:root{
+    --black: #515151;
+    --white: #fff;
+    --first: #0084fd;
+    --second: #b5ddff;
+    --third: #9792e4;
+    --fourth: #cbc9f1;
+    --bright: #fdc15f;
+}   
+
 /* regole generali */
 *{
     margin: 0;
@@ -26,22 +37,22 @@
 header .placeholder{
     height: 50px;
     width: 100px;
-    background-color: #b5ddff;
+    background-color: var(--second);
 }
 
 #demo .placeholder, #partners .placeholder, #about-us .placeholder{
-    background-color: #b5ddff;
+    background-color: var(--second);
 }
 
-#planning .placeholder, #benefits .placeholder, #started .placeholder{
-    background-color: white;
+#planning .placeholder, #benefits .placeholder, #started .placeholder, footer .placeholder{
+    background-color: var(--white);
 }
 
 /* regole header */
 
 header{
     height: 75px;
-    background-color: #0084fd;
+    background-color: var(--first);
 }
 
 .container-head{
@@ -56,7 +67,7 @@ header .container-head{
 /* regole main */
 
 main section:nth-child(2n){
-    background-color:#9792e4;
+    background-color: var(--third);
 }
 
 /* regole sezione demo */
@@ -74,6 +85,13 @@ main section:nth-child(2n){
     margin: 1rem auto;
 }
 
+/* regole footer */
+
+footer{
+    background-color: var(--black);
+}
+
+
 /* regole media queries */
 
 @media screen and (min-width:481px){
@@ -81,13 +99,14 @@ main section:nth-child(2n){
     .placeholder{
         height: calc( 100vw / 2 - 4rem );
     }
-    /* regole sezione demo */
-    #demo .card{
-        width: calc(100% / 3);
-    }
 
     #card-l .placeholder{
         height: 50%;
+    }
+
+    /* regole sezione demo */
+    #demo .card{
+        width: calc(100% / 3);
     }
 
     #demo #card-l{
@@ -121,25 +140,29 @@ main section:nth-child(2n){
 
 @media screen and (min-width:1064px){
     /* regole di debug */
+    
     .placeholder{
         height: calc( 100vw / 3 - 4rem );
     }
+
+    #card-l .placeholder{
+        width: 50%;
+        height: 100%;
+     }
+ 
     /* fine regole di debug */
+
     .container{
         max-width: 1000px;
         margin: auto;
     }
+
     /* regole sezione demo */
 
     #demo #card-l{
         display: flex;
         width: calc(100% / 3 * 2);
         height: calc( 100vw / 3 - 4rem ); /* regola di debug*/ /*altezza successivamente in relazione a contenuti*/
-    }
-
-    #card-l .placeholder{
-       width: 50%;
-       height: 100%;
     }
 
     /* regole sezione planning */
