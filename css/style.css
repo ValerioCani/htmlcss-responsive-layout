@@ -150,17 +150,21 @@ main section:nth-child(2n){
     background-color: var(--second);
 }
 
+#card-l{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#card-l .text{
+    margin-bottom: 2rem;
+}
+
 #card-l img{
     width: 250px;
     display: block;
 }
 
-.phone{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-top: 2rem;
-}
 
 #demo h2, #demo .fas{
     color: var(--first);
@@ -244,14 +248,15 @@ footer{
         width: calc(100% / 3 * 2 - 1rem);
     }
 
-    .phone{
-        justify-content: flex-start;
+    #demo #card-l img{
+        justify-content: flex-end;
     }
 
     /* regole sezione planning */
 
     #planning .planning1 h2{
         font-size: 4rem;
+        line-height: 4rem;
     }
 
     #planning .radius-l{
@@ -281,7 +286,7 @@ footer{
     }
 }
 
-@media screen and (min-width:1064px){
+@media screen and (min-width:769px){
     /************************************************************** regole di debug */
 
     .placeholder{
@@ -311,28 +316,43 @@ footer{
     /* regole sezione demo */
 
     #demo #card-l{
-        display: flex;
         width: calc(100% / 3 * 2 - 1rem);
+        flex-direction: row;
     }  
     
     #card-l img{
-        width: 100%;
+        align-self: flex-end;
     }
 
     /* regole sezione planning */
+    #planning .container{
+        max-width: 900px;
+        margin: auto;
+    }
 
     #planning .planning1 h2{
-        font-size:x-large;
+        font-size: x-large;
     }
 
-    #planning .planning2{
-    }
-    /* regole sezione planning */
-
-    #planning .card{
+    #planning #violet, #planning .appdev{
         width: 50%;
     }
+    
+    #planning .appdev *:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
 
+    #planning .appdev img {
+        width: 80%;
+    }
+
+    #planning button {
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    #planning .appdev{
+        align-self: flex-end  ;
+    }
     /* regole sezione benefits */
 
     #benefits .feature{
